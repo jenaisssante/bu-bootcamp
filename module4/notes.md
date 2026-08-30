@@ -1,0 +1,1 @@
+Learnt how to push/pull git changes and how to checkout unique branches via terminal in VSCode.
