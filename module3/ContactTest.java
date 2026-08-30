@@ -39,4 +39,14 @@ public class ContactTest {
         assertNotSame(contact, other);
         assertEquals(contact.toString(), other.toString());
     }
+
+    @Test
+    public void testContactsWithSameNameAreIndependent() {
+        Contact contactA = new Contact("Charlie Lee", "111-0000");
+        Contact contactB = new Contact("Charlie Lee", "222-0000");
+
+        assertEquals(contactA.getName(), contactB.getName());
+        assertNotEquals(contactA.getPhone(), contactB.getPhone());
+        assertNotSame(contactA, contactB);
+    }
 }
